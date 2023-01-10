@@ -9,21 +9,21 @@
 // Output:-1
 
 
-function exists(arr,search){
-  var result=[];
-  for(var i=0; i<arr.length; i++){
-    if(arr[i]==search){
-      result.push(i);
-    }
-  }
-  if(result==""){
-    return -1;
-  }
-  else{
-    return result;
-  }
-}
-console.log(exists([1,2,3,4,5,1,3],1))
+// function exists(arr,search){
+//   var result=[];
+//   for(var i=0; i<arr.length; i++){
+//     if(arr[i]==search){
+//       result.push(i);
+//     }
+//   }
+//   if(result==""){
+//     return -1;
+//   }
+//   else{
+//     return result;
+//   }
+// }
+// console.log(exists([1,2,3,4,5,1,3],1))
 
 
 
@@ -34,14 +34,14 @@ console.log(exists([1,2,3,4,5,1,3],1))
 // 543
 // 54
 // 5
-var n=5;
-for(var i=1; i<=n; i++){
-    var str=" ";
-    for(var j=n; j>=i; j--){
-        str=str+j;
-    }
-    console.log(str);
-}
+// var n=5;
+// for(var i=1; i<=n; i++){
+//     var str=" ";
+//     for(var j=n; j>=i; j--){
+//         str=str+j;
+//     }
+//     console.log(str);
+// }
 
 
 // Question 3:
@@ -50,24 +50,24 @@ for(var i=1; i<=n; i++){
 // Input: [3, 2, 1, 4, 5, 45]
 // Output: [1, 2, 3, 4, 5, 45]
 
-function sort(arr){
-    for(var i=0; i<arr.length; i++){
-        var min=i;
-        for(var j=i+1; j<arr.length; j++){
-            if(arr[j]<arr[min]){
-                min=arr[j];
-            }
-        }
-        if(i!==min){
-            temp=arr[i];
-            arr[i]=arr[min];
-            arr[min]=temp;
-        }
-    }
-    return arr;
-}
-var res=sort([3,2,1,4,5,45]);
-console.log(res);
+// function sort(arr){
+//     for(var i=0; i<arr.length; i++){
+//         var min=i;
+//         for(var j=i+1; j<arr.length; j++){
+//             if(arr[j]<arr[min]){
+//                 min=arr[j];
+//             }
+//         }
+//         if(i!==min){
+//             temp=arr[i];
+//             arr[i]=arr[min];
+//             arr[min]=temp;
+//         }
+//     }
+//     return arr;
+// }
+// var res=sort([3,2,1,4,5,45]);
+// console.log(res);
  
 
 
@@ -81,23 +81,23 @@ console.log(res);
 // Input: HELLO and JELLO
 // Output: False
 
-function check(a,b) {
-    let len1 = a.length;
-    let len2 = b.length;
-    if(len1 !== len2){
-       console.log('please enter equal length string');
-       return
-    }
-    let str1 = a.split('').sort().join('');
-    let str2 = b.split('').sort().join('');
-    if(str1 === str2){
-       console.log("True");
-    } else { 
-       console.log("False");
-    }
- }
- check("LISTEN","SILENT");
-check("HELLO","JELLO");
+// function check(a,b) {
+//     let len1 = a.length;
+//     let len2 = b.length;
+//     if(len1 !== len2){
+//        console.log('please enter equal length string');
+//        return
+//     }
+//     let str1 = a.split('').sort().join('');
+//     let str2 = b.split('').sort().join('');
+//     if(str1 === str2){
+//        console.log("True");
+//     } else { 
+//        console.log("False");
+//     }
+//  }
+//  check("LISTEN","SILENT");
+// check("HELLO","JELLO");
 
 
 
@@ -111,10 +111,10 @@ check("HELLO","JELLO");
 
 function reverse(str){
   var newstr=" ";
-  for(var index=str.length-1; index>=0; index++){
-       newstr+=index;
+  for(var i=str.length-1; i>=0; i--){
+       newstr+=str[i];
   }
   return newstr;
 }
-var res= reverse("Hello");
+var res= reverse("hello");
 console.log(res);
